@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane onMouseMoved="#mouselocation" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="425.0" prefWidth="742.0" BorderPane.alignment="CENTER">
+         <left>
+            <GridPane gridLinesVisible="true" prefHeight="233.0" prefWidth="90.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="23.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" prefWidth="26.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="BlackButton" graphicTextGap="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: black;" text="black">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="whiteButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: white;" text="white" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="grayButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: gray;" text="gray" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="redButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: red;" text="red" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="lightblueButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: lightblue;" text="lightblue" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="magentaButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: magenta;" text="magenta" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="yellowButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: yellow;" text="yellow" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="blueButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: BLUE;" text="blue" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="greenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: green;" text="green" textFill="#1b6815" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="orangeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: orange;" text="orange" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="lightgrayButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: lightgray;" text="lightgray" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cyanButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: cyan;" text="cyan" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pinkButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: pink;" text="pink" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="lightgreenButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colorselected" style="-fx-background-color: lightgreen;" text="lightgreen" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </left>
+         <top>
+            <GridPane prefHeight="62.0" prefWidth="597.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="32.0" minHeight="5.0" prefHeight="19.0" />
+                  <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox spacing="10.0" GridPane.rowIndex="1">
+                     <children>
+                        <ColorPicker fx:id="ColorBox" onAction="#colorBoxSelected" prefHeight="38.0" prefWidth="94.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ColorPicker>
+                        <Button fx:id="penButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="94.0" text="Pen" />
+                        <Button fx:id="eraserButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="100.0" text="Eraser" />
+                        <Button fx:id="fillButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefHeight="38.0" prefWidth="100.0" text="Fill" />
+                        <Button fx:id="lineButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="100.0">
+                           <graphic>
+                              <Line endX="100.0" startX="75.55593872070312" startY="17.292892456054688" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="circleButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="100.0">
+                           <graphic>
+                              <Circle fx:id="circal" fill="WHITE" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="rectanglebutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="100.0">
+                           <graphic>
+                              <Rectangle fx:id="rectangleButton" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="21.0" stroke="BLACK" strokeType="INSIDE" width="34.0" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="righttriangleButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefWidth="100.0">
+                           <graphic>
+                              <Polygon points="-24.0, 41.0, 1.5, 41.0, -24.0, 20.000030517578125" stroke="BLACK" strokeType="INSIDE">
+                                 <fill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="WHITE" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </fill>
+                              </Polygon>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="triangleButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toolSlected" prefHeight="38.0" prefWidth="100.0">
+                           <graphic>
+                              <Polygon points="-19.0, 40.0, 10.0, 40.0, -5.0, 21.0" stroke="BLACK" strokeType="INSIDE">
+                                 <fill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="WHITE" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </fill>
+                              </Polygon>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="openMenu" mnemonicParsing="false" onAction="#fileMenu" text="open" />
+                              <MenuItem fx:id="saveMenu" mnemonicParsing="false" onAction="#fileMenu" text="save" />
+                              <MenuItem fx:id="newMenu" mnemonicParsing="false" onAction="#fileMenu" text="new" />
+                              <MenuItem fx:id="closeMenu" mnemonicParsing="false" onAction="#fileMenu" text="close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Tools">
+                        <items>
+                          <MenuItem fx:id="penMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Pen" />
+                              <MenuItem fx:id="eraserMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Eraser" />
+                              <MenuItem fx:id="fillMenu" mnemonicParsing="false" text="Fill" />
+                              <MenuItem fx:id="lineMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Line" />
+                              <MenuItem fx:id="circleMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Circle" />
+                              <MenuItem fx:id="rectangleMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Rectangle" />
+                              <MenuItem fx:id="triangleMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="Triangle" />
+                              <MenuItem fx:id="righttriangleMenu" mnemonicParsing="false" onAction="#ShapeMenu" text="RightTriangle" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Colors">
+                        <items>
+                          <MenuItem fx:id="colorBoxMenu" mnemonicParsing="false" onAction="#colorBoxMenu" text="ColorBox" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="45.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Mouse location  " />
+                        <Label fx:id="mouselocationLabel" prefHeight="17.0" prefWidth="158.0" text="(x,y):(getmousecoordenet()" />
+                     </children>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding>
+                  </VBox>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="114.0" text="selected Shape:" />
+                              <Label fx:id="selectedShapeLabel" prefHeight="17.0" prefWidth="87.0" text="Label" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="127.0" text="selected color value:  " />
+                              <Label fx:id="selectedColorLabel" prefHeight="17.0" prefWidth="98.0" text="Label" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="59.0" prefWidth="214.0">
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <Label text="name:" />
+                                    <Label fx:id="shapelabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <Label fx:id="hightlable" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="47.0" text="hight" />
+                                    <TextField fx:id="setHight" onAction="#setShapeSize" prefHeight="16.0" prefWidth="88.0" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="wigthlabel" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="47.0" text="width" />
+                                    <TextField fx:id="setWidth" onAction="#setShapeSize" prefHeight="16.0" prefWidth="88.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="108.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="moveUp" mnemonicParsing="false" onAction="#moveShape" text="▲" GridPane.columnIndex="1" />
+                              <Button fx:id="moveLeft" mnemonicParsing="false" onAction="#moveShape" text="◄" GridPane.rowIndex="1" />
+                              <Button fx:id="moveRight" mnemonicParsing="false" onAction="#moveShape" text="►" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button fx:id="moveDown" mnemonicParsing="false" onAction="#moveShape" prefHeight="12.0" prefWidth="27.0" text="▼" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <Button fx:id="deleteButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteShape" text="Delete">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <Canvas fx:id="canvas" height="550.0" onDragEntered="#Drow" onMouseClicked="#getShapeinfo" onMouseMoved="#mouselocation" width="1300.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Canvas>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
