@@ -1,7 +1,7 @@
 # MyPaintShop-version-1.0
 
 
-## scope of the product
+## Project Scope
 MyPaintShop is paint tool software that allow the user to draw and modify
 different shape using different colors and have the ability to save and reopen a
 previous draw.
